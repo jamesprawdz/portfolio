@@ -1,0 +1,207 @@
+/* General Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Header and Navigation Styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 2em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header Branding */
+.header-branding {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+.header-branding a {
+  display: flex;
+  align-items: center;
+  color: white; /* Match the color of your header content */
+  text-decoration: none; /* No underline */
+}
+
+.header-branding img {
+  height: 50px; /* Adjust size as needed */
+  width: auto;
+  margin-right: 1em;
+  border-radius: 50%; /* Circular image */
+}
+
+.header-title h1,
+.header-title p {
+  margin: 0; /* Removes default margin */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  flex-grow: 1;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #04c2c9;
+}
+
+/* Section Styles */
+section {
+  padding: 2em 5%;
+}
+
+/* Portfolio Section */
+#portfolio {
+  max-width: 1200px; /* Limit the width for better readability */
+  margin: auto; /* Center the section */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.portfolio-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure the border-radius clips the content */
+  margin-bottom: 2em; /* Add space between items */
+  transition: box-shadow 0.3s ease;
+}
+
+.portfolio-item img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #eee; /* Add separation line */
+}
+
+.portfolio-item h3 {
+  background: #f4f4f4; /* Light background for the title */
+  padding: 0.5em 1em; /* Add padding around the title */
+  margin: 0; /* Remove default margin */
+  color: #333; /* Darker text color for contrast */
+}
+
+.portfolio-item p {
+  padding: 1em; /* Add padding around the text */
+  margin: 0; /* Remove default margin */
+  line-height: 1.6; /* Improve readability */
+}
+
+.portfolio-item a {
+  display: inline-block; /* Make the links align in line */
+  padding: 0.5em 1em; /* Add padding around the links */
+  margin: 1em; /* Add margin around the links */
+  background: #04c2c9; /* Use a distinct color for call to action */
+  color: white; /* White text for the links */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners for the links */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.portfolio-item a:hover {
+  background-color: #029dac; /* Darken the link background on hover */
+}
+
+/* Contact Section Styles */
+#contact form {
+  max-width: 500px;
+  margin: auto;
+}
+
+#contact label {
+  display: block;
+  margin: 0.5em 0;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+#contact button {
+  padding: 0.5em 1em;
+  background-color: #04c2c9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #029dac;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 1.5em 0; /* Adjust padding for smaller screens if needed */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .header-branding {
+    margin-left: 0.5em;
+  }
+
+  .header-branding img {
+    height: 40px; /* Smaller image size for mobile */
+  }
+
+  #portfolio {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .portfolio-item {
+    margin-bottom: 1em; /* Less space between items on smaller screens */
+  }
+}

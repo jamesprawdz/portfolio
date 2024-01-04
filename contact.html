@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Prawdzik - Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Header Branding with Image -->
+      <div class="header-branding">
+        <a href="index.html#home" style="text-decoration: none; color: inherit">
+          <div id="profileImage"></div>
+          <!-- Placeholder for the image -->
+          <div class="header-title">
+            <h1>James Prawdzik</h1>
+            <p>Software Engineer</p>
+          </div>
+        </a>
+      </div>
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="contact">
+        <h2>Get in Touch</h2>
+        <form action="submit_form_endpoint" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 James Prawdzik</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="imageLoader.js"></script>
+  </body>
+</html>
